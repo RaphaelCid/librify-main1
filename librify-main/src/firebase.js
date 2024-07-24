@@ -141,6 +141,7 @@ export const loginUsuario = async (usuario) => {
 
         if (userDoc) {
             console.log('Usuario autenticado:', userDoc);
+            localStorage.setItem("userId", userDoc.id); // Almacenar el ID del usuario en localStorage
             return true
         } else {
             throw new Error('Credenciales inválidas'); // Manejar el caso donde las credenciales son incorrectas
