@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Gestión de Libros</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='../static/css/style.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" href="../static/img/logogandalf.png">
+</head>
+
+<body>
+    <div>
+        <ul class="menu">
+            <li><a href="indexAdmin.html">Inicio</a></li>
+            <li><a href="prestamos.html">Prestamos</a></li>
+            <li><a href="usuarios.html">Usuarios</a></li>
+        </ul>
+        <section class="container">
+            <!-- Contenido de Administrador -->
+        </section>
+    </div>
+    <div class="text-left bg-white text-black p-4">
+        <div class="d-flex align-items-center">
+            <img src="../static/img/logogandalf.png" alt="Logo de la biblioteca" style="max-height: 50px;">
+            <h1>Formulario de Gestión de Libros</h1>
+        </div>
+        <main class="d-flex">
+            <div class="container-fluid p-2">
+                <form class="card p-4" id="formulario">
+                    <div class="m-1">
+                        <label class="form-label" for="titulo">Título del Libro</label>
+                        <input class="form-control" type="text" name="titulo" id="titulo">
+                    </div>
+                    <div class="m-1">
+                        <label class="form-label" for="autor">Autor</label>
+                        <input class="form-control" type="text" name="autor" id="autor">
+                    </div>
+                    <div class="m-1">
+                        <label class="form-label" for="fecha-publicacion">Fecha de Publicación</label>
+                        <input class="form-control" type="date" id="fecha-publicacion">
+                    </div>
+                    <div class="m-1">
+                        <label class="form-label" for="imagen">Imagen del Libro</label>
+                        <input type="file" id="imagen" class="form-control">
+                        <img id="img-preview" style="display: none; max-height: 100px;" alt="Image Preview">
+                    </div>
+                    <div class="m-1">
+                        <label class="form-label" for="genero">Género</label>
+                        <select class="form-select" id="genero" name="genero">
+                            <option value="">Seleccione un género</option>
+                            <option value="Ficción">Ficción</option>
+                            <option value="No Ficción">No Ficción</option>
+                            <option value="Misterio">Misterio</option>
+                            <option value="Fantasía">Fantasía</option>
+                            <option value="Ciencia Ficción">Ciencia Ficción</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Biografía">Biografía</option>
+                            <option value="Histórico">Histórico</option>
+                            <option value="Infantil">Infantil</option>
+                            <option value="Juvenil">Juvenil</option>
+                        </select>
+                    </div>
+                    <div class="m-1">
+                        <label class="form-label" for="precio">Precio</label>
+                        <input class="form-control" type="number" id="precio" name="precio" step="0.01">
+                    </div>
+                    <div class="m-1">
+                        <label class="form-label" for="cantidad">Cantidad</label>
+                        <input class="form-control" type="number" id="cantidad" name="cantidad">
+                    </div>
+                </form>
+                <div class="d-flex justify-content-left">
+                    <button class="btn btn-success m-5" id="btn-enviarlibro" value="Enviar">Enviar</button>
+                    <button class="btn btn-warning m-5" id="btn-limpiarlibro" onclick="limpiarLibro()">Limpiar</button>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-header-custom">
+                            <tr>
+                                <th>Título</th>
+                                <th>Autor</th>
+                                <th>Fecha de Publicación</th>
+                                <th>Imagen</th>
+                                <th>Género</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="contenido"></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="../src/js/admin/libros.js" type="module"></script>
+        <script src="../src/js/admin/verifica.js"></script>
+    </div>
+</body>
+</html>

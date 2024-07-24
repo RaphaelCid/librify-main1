@@ -1,0 +1,273 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+    background-color: #f4f1ea;
+    color: #2c3e50;
+}
+
+.text-left {
+    background-color: #8B4513; 
+    color: #FFFFFF;
+    padding: 20px 0;
+    text-align: left;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+.card {
+    margin: auto;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #fff7e6; 
+    border: 1px solid #d38b8b;
+}
+
+.table-responsive {
+    margin-top: 20px;
+    background-color: #fff7e6; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.is-invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+}
+
+.table-header-custom tr th{
+    background-color: #6b4226; 
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #6b4226;
+}
+
+#edad-lectura-label {
+    font-weight: bold;
+    color: #6b4226;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+.menu {
+    list-style-type: none;
+    background-color: rgb(53, 32, 18);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    float: none;
+}
+
+.menu li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.menu li:hover {
+    background-color: white;
+}
+
+.menu li a:hover {
+    color: rgb(53, 35, 9);
+}
+.login-button {
+    margin-left: auto; 
+}
+
+.login-button a {
+    background-color:  rgb(119, 81, 37); 
+    border-radius: 5px; 
+    padding: 10px 10px; 
+    font-weight: bold; /* Fuente en negrita */
+}
+
+.login-button a:hover {
+    background-color: rgb(255, 255, 255); /* Color de fondo al pasar el ratón */
+}
+.fondo {
+    background-image: linear-gradient(rgba(47, 47, 49, 0.315),
+            rgba(138, 125, 125, 0.096)),
+        url("../img/127585-arte-artes_creativas-juego_de_pc-la_ciencia_ficcion-videojuego_de_estrategia-1920x1080.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    height: 300px;
+    overflow: 100%;
+    background-attachment: cover;
+    background-position: center;
+}
+
+.texto-fondo {
+    height: 300px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: green;
+}
+
+.texto-dos {
+    font-size: 40px;
+    text-shadow: 0 0 5px black;
+}
+
+.texto-uno {
+    font-size: 60px;
+    text-shadow: 0 0 10px black;
+}
+
+.contenedor {
+    width: 90%;
+    padding: 80px 0;
+    margin: auto;
+    align-items: center;
+}
+
+.titulo-data {
+    font-size: 35px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contenedor-cartas {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.cartas {
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    width: 30%;
+    text-align: center;
+    background-color: rgb(78, 196, 63);
+    align-items: center;
+}
+.cartas2 {
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    width: 30%;
+    text-align: center;
+    background-color: rgb(78, 196, 63);
+    align-items: center;
+}
+
+.cartasproducto {
+    padding: 10px;
+    text-align: center;
+    margin: 15px auto 15px;
+    border:5px solid black;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    width: 670px;
+    text-align: center;
+    background-color: rgb(78, 196, 63);
+    align-items: center;
+}
+
+.cartasproducto2 {
+    padding: 10px;
+    text-align: center;
+    margin: 15px auto 15px;
+    border:5px solid black;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    width: 670px;
+    text-align: center;
+    background-color: rgb(78, 196, 63);
+    align-items: center;
+}
+.cartas p {
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.cartas i {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    margin: 40px 0 30px 0;
+}
+
+.cartas h3 {
+    padding: 25px;
+}
+
+.margen{
+    margin-top: 25px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.contenedorfooter {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 20px;
+}
+
+.footer-info {
+    text-align: center;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
