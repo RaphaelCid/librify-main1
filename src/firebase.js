@@ -133,15 +133,22 @@ export const loginUsuario = async (usuario) => {
     try {
         // Obtener el usuario de Firestore
         const userDoc = await obtenerUsuario({ email: usuario.email, passwd: usuario.passwd });
-        
+
         if (usuario.email === "admin@gmail.com" && usuario.passwd === "admin") {
             console.log('Admin autenticado: ID = admin');
             return "admin";
         }
 
         if (userDoc) {
-            console.log('Usuario autenticado:', userDoc);
-            return true
+            // Suponiendo que `obtenerUsuario` devuelve un objeto con los datos del usuario y la referencia del documento
+            // Si necesitas la ID del documento específico:
+            
+            const usuariosRef = collection(db, 'usuarios');
+            const q = query(usuariosRef, where('email', '==', usuario.email), where('passwd', '==', usuario.passwd));
+            const querySnapshot = await getDocs(q);
+            const userId = querySnapshot.docs[0].id; // Obtener la ID del documento
+            localStorage.setItem("userId", userId);
+            return true;
         } else {
             throw new Error('Credenciales inválidas'); // Manejar el caso donde las credenciales son incorrectas
         }
@@ -149,7 +156,8 @@ export const loginUsuario = async (usuario) => {
         console.error('Error al autenticar usuario:', error);
         throw error; // Propagar el error para manejarlo en la función llamadora
     }
-};
+}; 
+
 
 export const eliminarUsuario = async (id) => {
     await deleteDoc(doc(db, 'usuarios', id));
