@@ -3,12 +3,12 @@ import { doc, query, where, collection, deleteDoc, getDoc, getDocs, onSnapshot, 
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-storage.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDXrVR4494DPu26hbjLhHCfHgUf5r0Pbsw",
-    authDomain: "librify-e50da.firebaseapp.com",
-    projectId: "librify-e50da",
-    storageBucket: "librify-e50da.appspot.com",
-    messagingSenderId: "699128670345",
-    appId: "1:699128670345:web:d9f4e5253a5c3d39193e58"
+  apiKey: "AIzaSyBV6KblFIrFV4QD1AMQmR12F3xHdlBNnfI",
+  authDomain: "librify-cfbcc.firebaseapp.com",
+  projectId: "librify-cfbcc",
+  storageBucket: "librify-cfbcc.appspot.com",
+  messagingSenderId: "805833081586",
+  appId: "1:805833081586:web:6d780cd8040e1f022e866b"
 };
 
 const app = initializeApp(firebaseConfig);
